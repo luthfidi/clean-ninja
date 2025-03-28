@@ -1,41 +1,118 @@
-# FileVault
+# Clean Ninja
 
-![FileVault](https://icp.ninja/examples/_attachments/filevault.png)
+Clean Ninja is a blockchain-based waste reporting application built on the Internet Computer Protocol (ICP). It enables citizens to participate in keeping their city clean by reporting, verifying, and tracking the cleanup of abandoned waste.
 
-FileVault is a file storage application that allows you to upload files from your local computer and store them onchain. FileVault uses Internet Identity (II) for user login and authentication. Once files are uploaded, they can be downloaded at a later time, or they can be deleted.
+![Clean Ninja Screenshot](https://via.placeholder.com/800x400?text=Clean+Ninja+App)
 
-This application's logic is written in [Motoko](https://internetcomputer.org/docs/motoko/main/getting-started/motoko-introduction), a programming language designed specifically for developing canisters on ICP.
+## Features
 
-## What is ICP Ninja?
+- **Waste Reporting**: Report abandoned waste with photos, location, and descriptions
+- **Location Verification**: Uses HTTPS Outcalls to verify and validate report locations
+- **Community Verification**: Allows users to verify reports from others
+- **Cleanup Tracking**: Mark waste as cleaned up when resolved
+- **Filtering & Statistics**: Filter reports by district and status, view cleanup statistics
 
-ICP Ninja is a web-based integrated development environment (IDE) for the Internet Computer. It allows you to write code and deploy applications directly from your web browser in a temporary, sandbox-like environment.
+## Technology Stack
 
-For users who may already be familiar with the Internet Computer or who would rather use more **advanced tooling** such as command-line development tools, please refer to the [ICP developer documentation](https://internetcomputer.org/docs/building-apps/getting-started/install) to learn more.
+- **Backend**: Motoko canister on Internet Computer Protocol
+- **Frontend**: React + Vite + Tailwind CSS
+- **Authentication**: Internet Identity
+- **Data Storage**: On-chain storage for reports and images
+- **Unique ICP Features**: HTTPS Outcalls, Internet Identity, On-chain Storage
 
-Projects deployed to ICP from ICP Ninja are available on the mainnet for 20 minutes at a time. After 20 minutes, the project must be redeployed.
+## Application Workflow
 
-To deploy your project for long-term, production use such that it persists longer than 20 minutes without needing to be redeployed, you must migrate the files off of ICP Ninja and deploy them to the mainnet via `dfx` in a command-line environment.
+1. **Authentication**: Users log in using Internet Identity
+2. **Report Creation**:
+   - Take a photo of waste
+   - Detect location via GPS
+   - Verify location using HTTPS Outcalls
+   - Add description
+   - Submit report
+3. **Verification Process**:
+   - Other users can verify report validity
+   - Verification data stored on the blockchain
+4. **Cleanup Tracking**:
+   - Users can mark reports as cleaned
+   - Status updates reflected on the blockchain
 
-## Project structure
+## Implementation Notes
 
-The `/backend` folder contains the Motoko canister, `app.mo`. The `/frontend` folder contains web assets for the application's user interface. The user interface is written using the React framework. Edit the `mops.toml` file to add [Motoko dependencies](https://mops.one/) to the project.
+- The application is optimized to stay under 2000 lines of code
+- Responsive design for desktop and mobile devices
+- Error handling with fallbacks for a seamless user experience
+- District-based filtering for better organization of reports
 
-## Deploying from ICP Ninja
+## Project Structure
 
-When viewing this project in ICP Ninja, you can deploy it directly to the mainnet for free by clicking "Deploy" in the upper right corner.
+```
+/
+├── backend/                # Motoko code
+│   ├── app.mo              # Main backend canister
+│   └── Types.mo            # Type definitions
+├── frontend/               # React frontend
+│   ├── src/                # Source code
+│   │   ├── App.jsx         # Main application component
+│   │   ├── main.jsx        # Entry point
+│   │   ├── utils_api.jsx   # API utilities for backend communication
+│   │   ├── utils_auth.jsx  # Authentication utilities
+│   │   └── ...             # Other components and utilities
+│   ├── index.html          # HTML template
+│   └── index.css           # Global CSS
+├── dfx.json                # Project configuration
+└── package.json            # NPM configuration
+```
 
-To **download** or **reset** the project files, click the menu option next to the deploy button.
+## Deployment
 
-## Editing files
+The application is deployed on the Internet Computer blockchain network:
 
-To make adjustments to this project, you can edit any file that is unlocked. Then, redeploy your application to view your changes.
+- Backend Canister ID: `twkfl-haaaa-aaaab-qbnpa-cai`
+- Frontend Canister ID: `63hef-eyaaa-aaaab-qblya-cai`
 
-To edit files that are immutable in ICP Ninja, you can export the project to GitHub or download the project to your local environment using the "Download files" option.
+## Development
 
-## Build and deploy from the command-line
+### Prerequisites
 
-To migrate your ICP Ninja project off of the web browser and develop it locally, follow these steps. These steps are necessary if you want to deploy this project for long-term, production use on the mainnet.
+- [Node.js](https://nodejs.org/) (v14+)
+- [DFX](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html) (Internet Computer SDK)
 
-### 1. Download your project from ICP Ninja using the 'Download files' button on the upper left corner under the pink ninja star icon.
+### Setup
 
-### 2. Open the `BUILD.md` file for further instructions.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/clean-ninja.git
+   cd clean-ninja
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start local Internet Computer replica:
+   ```
+   dfx start --background
+   ```
+
+4. Deploy locally:
+   ```
+   dfx deploy
+   ```
+
+## Hackathon Notes
+
+This project was created for ICP Hackathon 12 - Track: World Computer. It demonstrates the unique capabilities of ICP:
+
+- **HTTPS Outcalls**: Used for location verification
+- **Internet Identity**: For secure, decentralized authentication
+- **On-chain Storage**: All data, including images, stored directly on the blockchain
+- **Chain-based Frontend**: The entire application runs from the ICP blockchain
+
+## License
+
+MIT License
+
+---
+
+Created by [Your Name] for ICP Ninja Hackathon 12
