@@ -1,5 +1,5 @@
 module {
-  // Type untuk waste reports
+  // Type for waste reports
   public type Report = {
     id : Text;
     reporter : Principal;
