@@ -150,7 +150,7 @@ persistent actor CleanNinja {
       let url = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" # Float.toText(lat) # "&lon=" # Float.toText(lng);
       
       // Add cycles for outcall
-      ignore ExperimentalCycles.add(100_000_000_000);
+      ExperimentalCycles.add(100_000_000_000);
       
       let response = await ic.http_request({
         url = url;
