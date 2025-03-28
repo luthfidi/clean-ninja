@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+}
+
+/* Icons via HTML entities */
+.icon-camera:before {
+  content: "📷";
+}
+
+.icon-location:before {
+  content: "📍";
+}
+
+.icon-user:before {
+  content: "👤";
+}
+
+.icon-check:before {
+  content: "✅";
+}
+
+.icon-close:before {
+  content: "❌";
+}
+
+.icon-trash:before {
+  content: "🗑️";
+}
+
+.fa-map-marker-alt:before {
+  content: "📍 ";
+}
+
+.fa-user-circle:before {
+  content: "👤 ";
+}
+
+.fa-check-circle:before {
+  content: "✅ ";
+}
+
+.fa-times-circle:before {
+  content: "❌ ";
+}
+
+.fa-camera:before {
+  content: "📷 ";
+}
+
+.fa-crosshairs:before {
+  content: "🎯 ";
+}
