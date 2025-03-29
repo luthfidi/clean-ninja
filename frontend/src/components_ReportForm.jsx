@@ -297,7 +297,11 @@ const ReportForm = ({ isOpen, onClose, onReportCreated }) => {
                   <option value="East Jakarta">East Jakarta</option>
                   <option value="North Jakarta">North Jakarta</option>
                 </select>
-                <span className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-500">v</span>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </div>
               </div>
             </div>
 
