@@ -5,14 +5,11 @@ import Array "mo:base/Array";
 import Nat "mo:base/Nat";
 import HashMap "mo:base/HashMap";
 import Iter "mo:base/Iter";
-import Option "mo:base/Option";
 import Result "mo:base/Result";
 import Blob "mo:base/Blob";
 import Float "mo:base/Float";
 import Bool "mo:base/Bool";
 import ExperimentalCycles "mo:base/ExperimentalCycles";
-import Char "mo:base/Char";
-import Nat32 "mo:base/Nat32";
 import Types "Types";
 
 persistent actor CleanNinja {
@@ -150,7 +147,7 @@ persistent actor CleanNinja {
       let url = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" # Float.toText(lat) # "&lon=" # Float.toText(lng);
       
       // Add cycles for outcall
-      ExperimentalCycles.add(100_000_000_000);
+      ExperimentalCycles.add<system>(100_000_000_000);
       
       let response = await ic.http_request({
         url = url;
