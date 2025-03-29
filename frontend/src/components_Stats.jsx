@@ -4,8 +4,8 @@ const Stats = ({ stats }) => {
   const { totalReports, reportedCount, cleanedCount } = stats;
   
   return (
-    <div className="container mx-auto px-4 py-6">
-      <div className="bg-white rounded-lg shadow-sm p-4 -mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="container mx-auto px-4 pt-4">
+      <div className="bg-white rounded-lg shadow-sm p-4 grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="text-center">
           <p className="text-xl font-bold text-teal-600">{totalReports}</p>
           <p className="text-xs text-gray-500">Total Reports</p>
