@@ -272,28 +272,37 @@ const MainApp = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center px-4">
-            <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-3">
-              <span className="text-xl">📸</span>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <img 
+                src="/handphone.png" 
+                alt="Handphone-image" 
+              />
             </div>
-            <h3 className="font-medium">1. Report</h3>
+            <h3 className="font-medium">Report</h3>
             <p className="text-sm text-gray-600">
               Take a photo of waste. Location is verified with GPS and HTTPS Outcalls.
             </p>
           </div>
           <div className="text-center px-4">
-            <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-3">
-              <span className="text-xl">✅</span>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <img 
+                src="/trash-verified.png" 
+                alt="verified-image" 
+              />
             </div>
-            <h3 className="font-medium">2. Verify</h3>
+            <h3 className="font-medium">Verify</h3>
             <p className="text-sm text-gray-600">
               Other users verify reports using blockchain-based verification.
             </p>
           </div>
           <div className="text-center px-4">
-            <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-3">
-              <span className="text-xl">🧹</span>
+            <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+              <img 
+                src="/truck.png" 
+                alt="truck-image" 
+              />
             </div>
-            <h3 className="font-medium">3. Clean</h3>
+            <h3 className="font-medium">Clean</h3>
             <p className="text-sm text-gray-600">
               Community resolves the issue. Report status is updated transparently.
             </p>
