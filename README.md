@@ -1,118 +1,97 @@
 # Clean Ninja
 
-Clean Ninja is a blockchain-based waste reporting application built on the Internet Computer Protocol (ICP). It enables citizens to participate in keeping their city clean by reporting, verifying, and tracking the cleanup of abandoned waste.
-
-![Clean Ninja Screenshot](https://via.placeholder.com/800x400?text=Clean+Ninja+App)
+Clean Ninja is a blockchain-based waste reporting application built on the Internet Computer Protocol (ICP). It empowers citizens to actively participate in maintaining a cleaner city by reporting, verifying, and tracking the cleanup of abandoned waste.
 
 ## Features
 
-- **Waste Reporting**: Report abandoned waste with photos, location, and descriptions
-- **Location Verification**: Uses HTTPS Outcalls to verify and validate report locations
-- **Community Verification**: Allows users to verify reports from others
-- **Cleanup Tracking**: Mark waste as cleaned up when resolved
-- **Filtering & Statistics**: Filter reports by district and status, view cleanup statistics
+- Waste Reporting: Users can report abandoned waste by submitting photos, location details, and descriptions.
+- Location Verification: Uses HTTPS Outcalls to verify and validate report locations.
+- Community Verification: Other users can verify reports to ensure authenticity.
+- Cleanup Tracking: Once resolved, reports can be marked as cleaned.
+- Filtering & Statistics: View reports by district and status, and track cleanup progress with statistics.
 
 ## Technology Stack
 
-- **Backend**: Motoko canister on Internet Computer Protocol
-- **Frontend**: React + Vite + Tailwind CSS
-- **Authentication**: Internet Identity
-- **Data Storage**: On-chain storage for reports and images
-- **Unique ICP Features**: HTTPS Outcalls, Internet Identity, On-chain Storage
+- Backend: Motoko canister on Internet Computer Protocol (ICP)
+- Frontend: React + Vite + Tailwind CSS
+- Authentication: Internet Identity
+- Data Storage: On-chain storage for reports and images
+- ICP-Specific Features: HTTPS Outcalls, Internet Identity, On-chain Storage
 
 ## Application Workflow
 
-1. **Authentication**: Users log in using Internet Identity
-2. **Report Creation**:
-   - Take a photo of waste
-   - Detect location via GPS
-   - Verify location using HTTPS Outcalls
-   - Add description
-   - Submit report
-3. **Verification Process**:
-   - Other users can verify report validity
-   - Verification data stored on the blockchain
-4. **Cleanup Tracking**:
-   - Users can mark reports as cleaned
-   - Status updates reflected on the blockchain
-
-## Implementation Notes
-
-- The application is optimized to stay under 2000 lines of code
-- Responsive design for desktop and mobile devices
-- Error handling with fallbacks for a seamless user experience
-- District-based filtering for better organization of reports
+1. Authentication: Users log in using Internet Identity.
+2. Report Creation:
+   - Take a photo of waste.
+   - Detect location via GPS.
+   - Verify location using HTTPS Outcalls.
+   - Add a description.
+   - Submit the report.
+3. Verification Process:
+   - Other users can verify report validity.
+   - Verification data is stored on the blockchain.
+4. Cleanup Tracking:
+   - Users can mark reports as cleaned.
+   - Status updates are reflected on the blockchain.
 
 ## Project Structure
 
 ```
 /
-├── backend/                # Motoko code
-│   ├── app.mo              # Main backend canister
-│   └── Types.mo            # Type definitions
+├── backend/                # Motoko backend canister
+│   ├── app.mo              # Main application logic
+│   ├── Types.mo            # Type definitions
 ├── frontend/               # React frontend
 │   ├── src/                # Source code
 │   │   ├── App.jsx         # Main application component
 │   │   ├── main.jsx        # Entry point
 │   │   ├── utils_api.jsx   # API utilities for backend communication
 │   │   ├── utils_auth.jsx  # Authentication utilities
-│   │   └── ...             # Other components and utilities
 │   ├── index.html          # HTML template
-│   └── index.css           # Global CSS
-├── dfx.json                # Project configuration
-└── package.json            # NPM configuration
+│   ├── index.css           # Global CSS styles
+├── dfx.json                # ICP project configuration
+├── package.json            # NPM package configuration
+└── README.md               # Project documentation
 ```
-
-## Deployment
-
-The application is deployed on the Internet Computer blockchain network:
-
-- Backend Canister ID: `twkfl-haaaa-aaaab-qbnpa-cai`
-- Frontend Canister ID: `63hef-eyaaa-aaaab-qblya-cai`
-
-## Development
 
 ### Prerequisites
 
+Ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (v14+)
 - [DFX](https://internetcomputer.org/docs/building-apps/getting-started/install) (Internet Computer SDK)
 
-### Setup
+### Setup Instructions
 
 1. Clone the repository:
-   ```
+   ```sh
    git clone https://github.com/yourusername/clean-ninja.git
    cd clean-ninja
    ```
-
 2. Install dependencies:
-   ```
+   ```sh
    npm install
    ```
-
-3. Start local Internet Computer replica:
-   ```
+3. Start the local Internet Computer replica:
+   ```sh
    dfx start --background
    ```
-
-4. Deploy locally:
-   ```
+4. Deploy the application locally:
+   ```sh
    dfx deploy
    ```
 
 ## Hackathon Notes
 
-This project was created for ICP Hackathon 12 - Track: World Computer. It demonstrates the unique capabilities of ICP:
+This project was developed for ICP Hackathon 12 under the World Computer track. It showcases the unique capabilities of the Internet Computer:
 
-- **HTTPS Outcalls**: Used for location verification
-- **Internet Identity**: For secure, decentralized authentication
-- **On-chain Storage**: All data, including images, stored directly on the blockchain
-- **Chain-based Frontend**: The entire application runs from the ICP blockchain
+- HTTPS Outcalls: Enables secure location verification.
+- Internet Identity: Provides decentralized authentication.
+- On-chain Storage: Ensures all data, including images, is securely stored on the blockchain.
+- Fully On-Chain Application: Both frontend and backend are deployed directly on ICP.
 
 ## License
 
-MIT License
-
+This project is licensed under the **MIT License**.
 ---
 ## Contributors
 
