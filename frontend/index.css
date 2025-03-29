@@ -34,6 +34,10 @@ body {
   content: "🗑️";
 }
 
+.fa-map-marker-alt:before {
+  content: "📍 ";
+}
+
 .fa-user-circle:before {
   content: "👤 ";
 }
