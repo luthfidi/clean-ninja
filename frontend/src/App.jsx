@@ -8,7 +8,7 @@ import ReportForm from './components_ReportForm';
 
 // Main application component
 const MainApp = () => {
-  const { isAuthenticated, isInitializing } = useAuth();
+  const { isAuthenticated, isInitializing, principal } = useAuth();
   const [isReportFormOpen, setIsReportFormOpen] = useState(false);
   const [reports, setReports] = useState([]);
   const [stats, setStats] = useState({
@@ -130,8 +130,16 @@ const MainApp = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <header className="bg-teal-500 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
+      <header className="relative bg-teal-500 text-white py-8">
+        <div className="absolute inset-0 overflow-hidden">
+          <img 
+            src="/Hero.jpg" 
+            alt="Clean City Hero" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-teal-500 bg-opacity-70"></div>
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-2xl md:text-3xl font-bold mb-3">Clean City Together</h1>
           <p className="mb-6 max-w-lg mx-auto">
             Report abandoned waste in your area and help create a cleaner, healthier city.
@@ -309,7 +317,12 @@ const MainApp = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-4 pt-4 text-center text-sm text-gray-400">
-            <p>© 2025 Clean Ninja. All rights reserved.</p>
+            <p>© 2025 <a 
+              href="https://github.com/luthfidi/clean-ninja" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-teal-400 hover:text-teal-300 transition-colors"
+            >Clean Ninja</a>. All rights reserved.</p>
           </div>
         </div>
       </footer>
