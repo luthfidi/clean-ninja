@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { verifyReport, markAsCleaned } from '../utils_api';
+import { verifyReport, markAsCleaned } from './utils_api';
 
 const ReportCard = ({ report, onAction, principal, isAuthenticated }) => {
   const [isVerifying, setIsVerifying] = useState(false);
@@ -206,18 +206,18 @@ const ReportCard = ({ report, onAction, principal, isAuthenticated }) => {
               rel="noopener noreferrer"
               className="text-teal-600 hover:underline text-xs block mb-1"
             >
-              <span className="icon-location"></span> {getDistrictName(report.district)}
+              <span className="fa-map-marker-alt"></span> {getDistrictName(report.district)}
             </a>
             <span className="text-xs text-gray-500 block">
-              <span className="icon-user"></span> {reporterString}
+              <span className="fa-user-circle"></span> {reporterString}
             </span>
           </div>
           <div className="w-1/2 text-right">
             <span className="text-teal-600 text-xs block mb-1">
-              <span className="icon-check"></span> {validCount} verified
+              <span className="fa-check-circle"></span> {validCount} verified
             </span>
             <span className="text-gray-500 text-xs block">
-              <span className="icon-close"></span> {invalidCount} invalid
+              <span className="fa-times-circle"></span> {invalidCount} invalid
             </span>
           </div>
         </div>
