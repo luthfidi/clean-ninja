@@ -2,6 +2,12 @@
 
 Clean Ninja is a blockchain-based waste reporting application built on the Internet Computer Protocol (ICP). It empowers citizens to actively participate in maintaining a cleaner city by reporting, verifying, and tracking the cleanup of abandoned waste.
 
+## Demo
+
+[Clean Ninja Screen Shoot](https://github.com/user-attachments/assets/1be973b2-257d-4b2b-956c-e0cab13537b7)
+
+Demo Video: https://drive.google.com/file/d/1wvLrLeAcNKUFGrirmJvyZweihJO5Rmvu/view?usp=sharing 
+
 ## Features
 
 - Waste Reporting: Users can report abandoned waste by submitting photos, location details, and descriptions.
