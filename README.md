@@ -75,7 +75,7 @@ The application is deployed on the Internet Computer blockchain network:
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v14+)
-- [DFX](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html) (Internet Computer SDK)
+- [DFX](https://internetcomputer.org/docs/building-apps/getting-started/install) (Internet Computer SDK)
 
 ### Setup
 
@@ -115,4 +115,4 @@ MIT License
 
 ---
 
-Created by [Your Name] for ICP Ninja Hackathon 12
+Created by **Brokechain** Team for ICP Ninja Hackathon 12 (codefest.id)
