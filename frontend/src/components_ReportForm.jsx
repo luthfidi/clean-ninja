@@ -249,65 +249,56 @@ const ReportForm = ({ isOpen, onClose, onReportCreated }) => {
             </div>
 
             {/* Location */}
-            <div className="mb-4">
+            <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-              <div className="flex items-center">
-                <div className="relative flex-grow">
-                  <input
-                    type="text"
-                    value={
-                      isDetectingLocation
-                        ? 'Detecting your location...'
-                        : isVerifyingLocation
-                        ? 'Verifying location...'
-                        : location.address
-                        ? location.address
-                        : location.latitude
-                        ? `${location.latitude.toFixed(6)}, ${location.longitude.toFixed(6)}`
-                        : 'Click button to detect location'
-                    }
-                    className="w-full border border-gray-300 rounded-l px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500"
-                    placeholder="Automatic location detection"
-                    readOnly
-                  />
-                  <div className="absolute right-3 top-2 text-gray-400">
-                    <span className="icon-location"></span>
-                  </div>
-                </div>
+              <div className="flex">
+                <input
+                  type="text"
+                  value={
+                    isDetectingLocation ? 'Detecting location...' :
+                    isVerifyingLocation ? 'Verifying...' :
+                    location.address || 
+                    (location.latitude ? `${location.latitude.toFixed(6)}, ${location.longitude.toFixed(6)}` : 'Detecting your location...')
+                  }
+                  className="flex-grow border border-gray-300 rounded-l-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500"
+                  readOnly
+                />
                 <button
                   type="button"
                   onClick={handleDetectLocation}
                   disabled={isDetectingLocation || isVerifyingLocation}
-                  className={`${
-                    isDetectingLocation || isVerifyingLocation
-                      ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-teal-500 hover:bg-teal-600'
-                  } text-white rounded-r px-3 py-2 text-sm`}
+                  className={`
+                    px-3 py-2 text-sm rounded-r-lg
+                    ${isDetectingLocation || isVerifyingLocation 
+                      ? 'bg-gray-200 text-gray-500 cursor-not-allowed' 
+                      : 'bg-teal-500 text-white hover:bg-teal-600'
+                    }
+                  `}
                 >
-                  <span className="icon-crosshairs"></span>
+                  <span role="img" aria-label="location">📍</span>
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-1">
-                {isVerifyingLocation ? 'Verifying location using HTTPS Outcalls...' : 
-                'Location is used to determine district'}
-              </p>
             </div>
 
             {/* District */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-1">District</label>
-              <select
-                value={district}
-                onChange={(e) => setDistrict(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500"
-              >
-                <option value="">-- Select District --</option>
-                <option value="Central Jakarta">Central Jakarta</option>
-                <option value="West Jakarta">West Jakarta</option>
-                <option value="South Jakarta">South Jakarta</option>
-                <option value="East Jakarta">East Jakarta</option>
-                <option value="North Jakarta">North Jakarta</option>
-              </select>
+              <div className="relative">
+                <select
+                  value={district}
+                  onChange={(e) => setDistrict(e.target.value)}
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500"
+                  style={{ paddingRight: '2.5rem' }}
+                >
+                  <option value="">-- Select District --</option>
+                  <option value="Central Jakarta">Central Jakarta</option>
+                  <option value="West Jakarta">West Jakarta</option>
+                  <option value="South Jakarta">South Jakarta</option>
+                  <option value="East Jakarta">East Jakarta</option>
+                  <option value="North Jakarta">North Jakarta</option>
+                </select>
+                <span className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-500">v</span>
+              </div>
             </div>
 
             {/* Description */}
@@ -317,7 +308,7 @@ const ReportForm = ({ isOpen, onClose, onReportCreated }) => {
                 rows="3"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500"
                 placeholder="Describe the waste issue..."
               ></textarea>
             </div>
