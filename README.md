@@ -8,6 +8,8 @@ Clean Ninja is a blockchain-based waste reporting application built on the Inter
 
 Demo Video: https://drive.google.com/file/d/1wvLrLeAcNKUFGrirmJvyZweihJO5Rmvu/view?usp=sharing 
 
+*Video Notes: Some features are not included in the demo video, such as the location link on the report card (e.g., "East Jakarta"), which redirects directly to Google Maps.
+
 ## Features
 
 - Waste Reporting: Users can report abandoned waste by submitting photos, location details, and descriptions.
