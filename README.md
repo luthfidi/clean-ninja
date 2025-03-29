@@ -114,5 +114,54 @@ This project was created for ICP Hackathon 12 - Track: World Computer. It demons
 MIT License
 
 ---
+## Contributors
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/luthfidi">
+           <img src="https://avatars.githubusercontent.com/u/114864625?v=4?s=100" width="100px" alt="Luthfi Hadi" />
+          <br />
+          <sub><b>LUTHFI HADI</b></sub>
+        </a>
+        <br />Developer
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/Phiy-O">
+          <img src="https://avatars.githubusercontent.com/u/179428948?v=4?s=100" width="100px" alt="Andika Vio Pratama" />
+          <br />
+          <sub><b>ANDIKA VIO PRATAMA</b></sub>
+        </a>
+        <br />Developer
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/12ATIF">
+          <img src="https://avatars.githubusercontent.com/u/104004537?v=4?s=100" width="100px" alt="Latif Ali Nurjaman" />
+          <br />
+          <sub><b>LATIF ALI NURJAMAN</b></sub>
+        </a>
+        <br />Developer
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/wmaulanaaishq">
+          <img src="https://ui-avatars.com/api/?size=100&name=WAHYU+MAULANA+I" width="100px" alt="Wahyu Maulana Ishaq" />
+          <br />
+          <sub><b>WAHYU MAULANA I</b></sub>
+        </a>
+        <br />Developer
+      </td>
+      <td align="center" valign="top" width="14.28%">
+        <a href="https://github.com/ardtys">
+          <img src="https://avatars.githubusercontent.com/u/114295960?v=4?s=100" width="100px" alt="Daffa Rifki Arditya" />
+          <br />
+          <sub><b>DAFFA RIFKI ARDITYA</b></sub>
+        </a>
+        <br />Developer
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 Created by **Brokechain** Team for ICP Ninja Hackathon 12 (codefest.id)
