@@ -4,7 +4,7 @@ Clean Ninja is a blockchain-based waste reporting application built on the Inter
 
 ## Demo
 
-[Clean Ninja Screen Shoot](https://github.com/user-attachments/assets/1be973b2-257d-4b2b-956c-e0cab13537b7)
+![image](https://github.com/user-attachments/assets/4cbaac36-077a-4454-8455-cf20a0596cce)
 
 Demo Video: https://drive.google.com/file/d/1wvLrLeAcNKUFGrirmJvyZweihJO5Rmvu/view?usp=sharing 
 
