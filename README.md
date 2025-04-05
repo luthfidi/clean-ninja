@@ -97,10 +97,6 @@ This project was developed for ICP Hackathon 12 under the World Computer track. 
 - On-chain Storage: Ensures all data, including images, is securely stored on the blockchain.
 - Fully On-Chain Application: Both frontend and backend are deployed directly on ICP.
 
-## License
-
-This project is licensed under the **MIT License**.
----
 ## Contributors
 
 <table>
