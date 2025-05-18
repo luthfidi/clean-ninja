@@ -72,7 +72,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/clean-ninja.git
+   git clone https://github.com/luthfidi/clean-ninja.git
    cd clean-ninja
    ```
 2. Install dependencies:
